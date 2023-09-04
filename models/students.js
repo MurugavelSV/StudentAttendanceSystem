@@ -3,7 +3,8 @@ const mongoose = require('mongoose');
 const studentSchema = new mongoose.Schema({
     name: {
         type: String,
-        required: true
+        required: true,
+        unique: true
     },
     admissionno: {
         type: Number,
@@ -14,7 +15,7 @@ const studentSchema = new mongoose.Schema({
         required: true
     },
     dob: {
-        type: Date,
+        type: String,
         required: true
     },
     city: {
