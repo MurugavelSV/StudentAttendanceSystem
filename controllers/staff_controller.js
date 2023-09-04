@@ -2,23 +2,14 @@ const Staff = require('../models/staff');
 
 module.exports.loadPage = (req, res) => {
     (async () => {
-<<<<<<< HEAD
+
         // if(req.isAuthenticated()){
             return res.render('staff', {
                 title: "Staff | Dashboard"
             });
         // }else{
-        //     return res.render('/staff/login');
+        //     return res.redirect('/staff/login');
         // }
-=======
-        if(req.isAuthenticated()){
-            return res.render('staff', {
-                title: "Staff | Dashboard"
-            });
-        }else{
-            return res.redirect('/staff/login');
-        }
->>>>>>> ae716c08d9df27198537a2c907f706e36ffcae21
     })();
 };
 
