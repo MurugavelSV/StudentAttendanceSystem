@@ -13,7 +13,7 @@ module.exports.loadSignup = (req, res) => {
 };
 
 module.exports.loadLogin = (req, res) => {
-    return res.render('login', {
+    return res.render('stafflogin', {
         title: "Staff | Sign-in"
     });
 };

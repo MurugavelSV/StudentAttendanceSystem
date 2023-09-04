@@ -1,1 +1,1 @@
-const passport = require
+const passport = require('passport');
