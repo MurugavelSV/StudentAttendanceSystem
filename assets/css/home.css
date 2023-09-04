@@ -5,11 +5,11 @@
 } */
 
 .background {
-    background-image: url(/Image/homepage_gif.webp);
+    background-image: url(/images/homepage_gif.webp);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    filter: blur(3px);
+    filter: blur(px);
     position: absolute;
     top: 0;
     left: 0;
@@ -82,7 +82,7 @@
 }
 
 .about, .contact {
-    background-color: #fff;
+    background-color: #858484;
     padding: 40px;
     margin: 20px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
