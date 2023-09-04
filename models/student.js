@@ -21,6 +21,14 @@ const studentSchema = new mongoose.Schema({
     city: {
         type: String,
         required: true
+    },
+    teacher: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Staff'
+    },
+    daysattended: {
+        type: Number,
+        default: 0
     }
 }, {
     timestamps: true

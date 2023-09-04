@@ -1,25 +1,21 @@
 const Staff = require('../models/staff');
+const Student = require('../models/student');
 
 module.exports.loadPage = (req, res) => {
     (async () => {
-<<<<<<< HEAD
-
-        // if(req.isAuthenticated()){
-            return res.render('staff', {
-                title: "Staff | Dashboard"
-            });
-        // }else{
-        //     return res.redirect('/staff/login');
-        // }
-=======
-        if(req.isAuthenticated()){
-            return res.render('staff', {
-                title: "Staff | Dashboard"
-            });
-        }else{
-            return res.redirect('/staff/login');
+        try{
+            if(req.isAuthenticated()){
+                const students = await Student.find({teacher: req.user._id})
+                return res.render('staff', {
+                    title: "Staff | Dashboard",
+                    studentData: students
+                });
+            }else{
+                return res.redirect('/staff/login');
+            }
+        }catch(err){
+            console.log(`Error: ${err.message}`);
         }
->>>>>>> 2350b65b31638e7fcf2399eee21440b4ada35dfa
     })();
 };
 

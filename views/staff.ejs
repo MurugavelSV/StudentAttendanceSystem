@@ -41,45 +41,21 @@
             <th>Register No</th>
             <th>Date of Birth</th>
             <th>Present/Absent</th>
+            <th>No of days attended</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td><button class="pre">Present</button>
-                <button class="abs">Absent</button></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td><button class="pre">Present</button>
-                <button class="abs">Absent</button></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td><button class="pre">Present</button>
-                <button  class="abs">Absent</button>
-            </td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td><button  class="pre">Present</button>
-                <button  class="abs">Absent</button></td>
-          </tr>
-          <tr>
-            <td> </td>
-            <td></td>
-            <td></td>
-            <td><button class="pre">Present</button>
-                <button  class="abs">Absent</button></td>
-          </tr>
+            <% for(let student of studentData){ %>
+                <tr>
+                    <td><%= student.name %></td>
+                    <td><%= student.regno %></td>
+                    <td><%= student.dob %></td>
+                    <td><button class="pre"><a href="/student/present/?id=<%= student.id %>">Present</a></button>
+                        <button class="abs"><a href="/student/absent/?id=<%= student.id %>">Absent</a></button>
+                    </td>
+                    <td><%= student.daysattended %></td>
+                  </tr>
+            <% } %>
         </tbody>
       </table>
       
