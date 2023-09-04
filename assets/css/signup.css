@@ -1,5 +1,5 @@
 .background {
-    background-image: url(/Image/bkgif1.gif);
+    background-image: url(/images/signin_login.gif);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -22,27 +22,21 @@ body {
 
 
 .container {
-    /* background-image: url('/Image/login_signin_image.png') ;
-    background-position: center; */
 
     background-color: #fff;
     border-radius: 5px;
+    height: 500px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     text-align: center;
     padding: 40px;
     width: 300px;
 }
 
-.login-box {
-    margin: 0 auto;
-}
-
-
-
 h1 {
     font-size: 24px;
     color: #333;
     margin-bottom: 20px;
+    margin-top: -26px;
 }
 
 h2 {
@@ -136,7 +130,7 @@ button[type="submit"]:hover {
 
 .text-input:focus+.label,
 .filled{
-    top:-10px;
+    /* top:-10px; */
     color: #0056b3;
     font-size: 14px;
     font-weight:300;
