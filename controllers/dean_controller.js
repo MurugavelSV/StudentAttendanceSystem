@@ -1,29 +1,29 @@
-const Hod = require('../models/hod');
+const Dean = require('../models/dean');
 
 module.exports.loadPage = (req, res) => {
-    return res.render('hod', {
-        title: 'HOD | Dashboard'
+    return res.render('dean', {
+        title: 'Dean | Dashboard'
     });
 };
 
 module.exports.loadSignup = (req, res) => {
-    return res.render('hodsignup', {
-        title: 'HOD | Sign-up'
+    return res.render('deansignup', {
+        title: 'Dean | Sign-up'
     });
 };
 
 module.exports.loadLogin = (req, res) => {
     return res.render('login', {
-        title: 'HOD | Sign-in'
+        title: 'Dean | Sign-in'
     });
 };
 
 module.exports.createUser = (req, res) => {
     (async () => {
-        await Hod.create(req.body).then((user) => {
-            return res.redirect('/hod/dashboard');
+        await Dean.create(req.body).then((user) => {
+            return res.redirect('/dean/dashboard');
         }).catch((err) => {
             console.log(`Error: ${err.message}`);
         });
     })();
-}
+};

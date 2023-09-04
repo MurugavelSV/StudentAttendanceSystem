@@ -1,29 +1,29 @@
-const Hod = require('../models/hod');
+const Staff = require('../models/staff');
 
 module.exports.loadPage = (req, res) => {
-    return res.render('hod', {
-        title: 'HOD | Dashboard'
+    return res.render('staff', {
+        title: "Staff | Dashboard"
     });
 };
 
 module.exports.loadSignup = (req, res) => {
-    return res.render('hodsignup', {
-        title: 'HOD | Sign-up'
+    return res.render('staffsignup', {
+        title: "Staff | Sign-up"
     });
 };
 
 module.exports.loadLogin = (req, res) => {
     return res.render('login', {
-        title: 'HOD | Sign-in'
+        title: "Staff | Sign-in"
     });
 };
 
 module.exports.createUser = (req, res) => {
     (async () => {
-        await Hod.create(req.body).then((user) => {
-            return res.redirect('/hod/dashboard');
+        await Staff.create(req.body).then((user) => {
+            return res.redirect('/staff/dashboard');
         }).catch((err) => {
             console.log(`Error: ${err.message}`);
         });
     })();
-}
+};
