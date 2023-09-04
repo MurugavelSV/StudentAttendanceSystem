@@ -10,8 +10,8 @@ footer {
     background-color: #007BFF;
     color: #fff;
     text-align: center;
-    padding: 10px; 
-    margin-top:px;
+    padding: 3px; 
+   /* margin-top:0px;  */
   }
   .cta-button {
     display: inline-block;
@@ -37,4 +37,8 @@ footer {
     color: #007BFF !important;
     box-shadow: 0 0 20px rgbs(0 ,0,0,0.5);
     transform: scale(1.1);
+}
+
+input{
+    color: black;
 }

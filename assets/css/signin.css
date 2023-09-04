@@ -124,7 +124,7 @@ button[type="submit"]:hover {
     font-size: 20px;
     outline: none;
     transition: all .3s;
-    color: #fff;
+    color: black;
 
 }
 
