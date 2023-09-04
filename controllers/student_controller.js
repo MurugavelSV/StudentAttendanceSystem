@@ -30,6 +30,7 @@ module.exports.markPresent = (req, res) => {
     (async () => {
         try{
             const student = await Student.findById(req.params.id);
+            console.log(student);
             student.daysattended = Number(student.daysattended) + 1;
             student.save();
             return res.redirect('/staff/dashboard');
