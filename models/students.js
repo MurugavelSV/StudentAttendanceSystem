@@ -9,6 +9,10 @@ const studentSchema = new mongoose.Schema({
         type: Number,
         required: true
     },
+    regno: {
+        type: Number,
+        required: true
+    },
     dob: {
         type: Date,
         required: true

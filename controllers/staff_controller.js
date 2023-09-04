@@ -1,15 +1,15 @@
 const Staff = require('../models/staff');
 
 module.exports.loadPage = (req, res) => {
-    async () => {
+    (async () => {
         if(req.isAuthenticated()){
             return res.render('staff', {
                 title: "Staff | Dashboard"
             });
         }else{
-            return res.render('/staff/login');
+            return res.redirect('/staff/login');
         }
-    }
+    })();
 };
 
 module.exports.loadSignup = (req, res) => {
@@ -25,10 +25,10 @@ module.exports.loadLogin = (req, res) => {
 };
 
 module.exports.displayProfile = (req, res) => {
-    async () => {
-        
-    }
-}
+    return res.render('staffprofile', {
+        title: req.user.username + " | Profile "
+    });
+};
 
 module.exports.createUser = (req, res) => {
     (async () => {
