@@ -144,8 +144,11 @@ button[type="submit"]:hover {
     font-size: 20px;
     outline: none;
     transition: all .3s;
+<<<<<<< HEAD
     color: black;
 
+=======
+>>>>>>> c9c65b1a8256691ceaf8111766a61e448894feb5
 }
 .input-container {
     position: relative;
