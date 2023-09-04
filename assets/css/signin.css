@@ -59,6 +59,12 @@ h2 {
     color: #555;
     margin-bottom: 20px;
 }
+#p1 , #p2{
+    color: rgb(180, 0, 0);
+    margin-top: -19px;
+    padding-left :0px;
+    margin-left: -95px;
+}
 
 .login-form input {
     width: 100%;
