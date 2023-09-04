@@ -7,5 +7,6 @@ router.use('/roles', require('./roles'));
 router.use('/hod', require('./hod'));
 router.use('/dean', require('./dean'));
 router.use('/staff', require('./staff'));
+router.use('/student', require('./student'));
 
 module.exports = router;
