@@ -9,27 +9,27 @@ passport.use(new LocalStrategy({
     await Staff.findOne({
         username: username,
         password: password
-    }).then((staff) => {
-        if(!staff){
+    }).then((user) => {
+        if(!user){
             console.log(`Error in finding user`);
             return done(null, false);
         }else{
-            return done(null, staff);
+            return done(null, user);
         }
     }).catch((err) => {
         return done(err);
     });
 }));
 
-passport.serializeUser(async (staff, done) => {
-    return done(null, staff._id);
+passport.serializeUser(async (user, done) => {
+    return done(null, user._id);
 });
 
 passport.deserializeUser(async (id, done) => {
     try{
-        const staff = await Staff.findById(id);
-        if(staff){
-            return done(null, staff);
+        const user = await Staff.findById(id);
+        if(user){
+            return done(null, user);
         }else{
             return done(null, false);
         }
@@ -48,8 +48,7 @@ passport.checkAuthenticated = (req, res, next) => {
 
 passport.setAuthenticated = (req, res, next) => {
     if(req.isAuthenticated()){
-        res.locals.staff = req.staff;
-        console.log(res.locals.staff);
+        res.locals.user = req.user;
     }
     return next();
 };
