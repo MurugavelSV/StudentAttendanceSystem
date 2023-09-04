@@ -4,5 +4,6 @@ const homeController = require('../controllers/home_controller');
 
 router.get('/', homeController.loadHome);
 router.use('/roles', require('./roles'));
+router.use('/hod', require('./hod'));
 
 module.exports = router;
