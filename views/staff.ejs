@@ -3,13 +3,11 @@
     <nav class="navbar">
         <div class="logo">Attendance System</div>
         <ul class="nav-links">
-            <li><a href="#">Dashboard</a></li>
             <li><a href="#">Students</a></li>
-            <li><a href="#">Courses</a></li>
             <li><a href="#">Attendance</a></li>
             <li><a href="#">Reports</a></li>
-            <li><a href="#">Profile</a></li>
-            <li><a href="#">Logout</a></li>
+            <li><a href="/staff/profile">Profile</a></li>
+            <li><a href="/staff/logout">Logout</a></li>
         </ul>
     </nav>
 </header>
@@ -30,7 +28,8 @@
                     <a href="#"><button class="add-button">Add Student</button></a>
                 
             </div>
-            <!-- Add course management features here -->
+
+            <!-- <% if(locals.staff) %> -->
         </section>
 </main>
 <footer class="footer">
