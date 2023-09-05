@@ -8,7 +8,7 @@ module.exports.loadPage = (req, res) => {
                 const students = await Student.find({teacher: req.user._id})
                 return res.render('staff', {
                     title: "Staff | Dashboard",
-                    studentData: students
+                    studentData: students,
                 });
             }else{
                 return res.redirect('/staff/login');

@@ -26,11 +26,34 @@ module.exports.createUser = (req, res) => {
     })();
 };
 
+module.exports.deleteUser = (req, res) => {
+    (async () => {
+        try{
+            console.log(req.query);
+            const student = await Student.findById(req.query.studentId);
+            if(student){
+                const staff = await Staff.findById(req.query.staffId);
+                if(staff){
+                    staff.students = staff.students.filter((id) => {
+                        return id != req.query.studentId;
+                    });
+
+                    staff.save();
+                    await Student.deleteOne({_id: req.query.studentId});
+                }
+            }
+            return res.redirect('/staff/dashboard');
+        }catch(err){
+            console.log(`Error: ${err.message}`);
+        }
+    })();
+} 
+
 module.exports.markPresent = (req, res) => {
     (async () => {
         try{
-            const student = await Student.findById(req.params.id);
-            console.log(student);
+            const student = await Student.findById(req.query.id);
+            // console.log(student);
             student.daysattended = Number(student.daysattended) + 1;
             student.save();
             return res.redirect('/staff/dashboard');
